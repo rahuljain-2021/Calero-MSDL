@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="23.132">
+<testcase classname="Placing an Order" name="end-to-end test to purchase some devices" time="22.741">
+<system-out><![CDATA[Given I am on homepage......................................................passed
+When I click on laptop button...............................................passed
+And I select and add a laptop to cart.......................................passed
+When I click on Monitors button.............................................passed
+And I select and add a monitor to cart......................................passed
+And I go to cart and verify the order.......................................passed
+And I press the place order button..........................................passed
+When I fill the place order form............................................passed
+And I press Purchase button.................................................passed
+Then Order is place successfully............................................passed
+]]></system-out>
+</testcase>
+</testsuite>
