@@ -1,6 +1,6 @@
 Feature: Placing an Order
 
-
+  @Test
   Scenario: end-to-end test to purchase some devices
 
     Given I am on homepage

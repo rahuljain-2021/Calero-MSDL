@@ -23,7 +23,6 @@ public class OrderSteps extends Base {
         homePage.clickOnSonyVaio();
         homePage.setAddToCartBtn();
         TestUtil.waitForSeconds(2);
-        //Thread.sleep(2000);
         driver.switchTo().alert().accept();
         homePage.homeBtn();
 
@@ -35,19 +34,17 @@ public class OrderSteps extends Base {
     }
 
     @When("I select and add a monitor to cart")
-    public void i_select_and_add_a_monitor_to_cart() throws InterruptedException {
+    public void i_select_and_add_a_monitor_to_cart() {
         homePage.clickOnAsus();
         homePage.setAddToCartBtn();
         TestUtil.waitForSeconds(2);
-        //Thread.sleep(2000);
         driver.switchTo().alert().accept();
     }
 
     @When("I go to cart and verify the order")
-    public void i_go_to_cart_and_verify_the_order() throws InterruptedException {
+    public void i_go_to_cart_and_verify_the_order() {
         cartPage.clickOnCartBtn();
         TestUtil.waitForSeconds(3);
-        //Thread.sleep(3000);
         cartPage.verifyCartItems();
     }
 
@@ -77,6 +74,4 @@ public class OrderSteps extends Base {
         teardown();
 
     }
-
-
 }

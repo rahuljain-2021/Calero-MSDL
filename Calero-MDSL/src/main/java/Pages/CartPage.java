@@ -43,15 +43,19 @@ public class CartPage extends Base {
     public WebElement purchaseBtn;
 
 
-    String winHandleBefore = driver.getWindowHandle();
+    String winHandleBefore = driver.getWindowHandle(); // Store the current window handle
     String msgExpected = "Thank you for your purchase!";
     String cartItem1 = "Sony vaio i7";
     String cartItem2 = "ASUS Full Hd";
 
-    public CartPage(WebDriver driver) {
+    public CartPage(WebDriver driver) {     // Constructor : Object of the class has been created
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
+
+    /**
+     * Methods or actions of the elements of the page
+     */
 
     public void clickOnCartBtn() {
         wait.until(ExpectedConditions.visibilityOf(cartBtn));
@@ -59,7 +63,6 @@ public class CartPage extends Base {
     }
 
     public void clickOnPlaceOrderBtn() {
-        // Store the current window handle
         wait.until(ExpectedConditions.visibilityOf(placeOrderBtn));
         placeOrderBtn.click();
         for (String winHandle : driver.getWindowHandles()) {

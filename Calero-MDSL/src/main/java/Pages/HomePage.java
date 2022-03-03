@@ -33,11 +33,14 @@ public class HomePage extends Base {
     @FindBy(xpath = "//a[contains(.,'Home')]")
     public WebElement homeBtn;
 
-    public HomePage(WebDriver driver) {
+    public HomePage(WebDriver driver) {     // Constructor : Object of the class has been created
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
+    /**
+     * Methods or actions of the elements of the page
+     */
     public void clickOnLaptopBtn() {
         wait.until(ExpectedConditions.visibilityOf(laptopBtn));
         laptopBtn.click();
